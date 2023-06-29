@@ -1,0 +1,37 @@
+body {
+  overflow: hidden;
+ background-image: linear-gradient(white);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#flipbook .page{
+    background-color: rgb(223, 244, 201);
+
+}
+
+#flipbook.shadow{
+  -webkit-box-shadow: 0 4px 10px #666;
+  -moz-box-shadow: 0 4px 10px #666;
+  -ms-box-shadow: 0 4px 10px #666;
+  -o-box-shadow: 0 4px 10px #666;
+  box-shadow: 0 4px 10px #666;
+}
+
+  
+ 
+  #message {
+    position: fixed;
+    top: 70%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Pacifico', cursive;
+    color: red;
+    text-align: center;
+  } 
+
