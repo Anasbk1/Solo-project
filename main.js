@@ -18,24 +18,27 @@ $(document).ready(function() {
 
     $('li').css('text-decoration', 'line-through');
 
-   setTimeout(function() {
-    $('li').hide();
-    $('#message').text(input + ' was Done').show();
-  
     setTimeout(function() {
-      $('#message').hide();
-    }, 5000);
-  }, 3000);
+     $('li').hide();
+     $('#message').text(input + ' was Done').show();
+  
+     setTimeout(function() {
+       $('#message').hide();
+     }, 5000);
+     }, 3000);
 
     var savedInputs = localStorage.getItem('inputs') ;
+   
     savedInputs += input + ',';
     localStorage.setItem('inputs', savedInputs);
-
+    
     var inputsArray = savedInputs.split(',');
     var deathsElement = $('#deaths');
-    deathsElement.empty();
+    // deathsElement.empty();
     for (var i = 0; i < inputsArray.length; i++) {
-      deathsElement.append('<li>' + inputsArray[i] + '</li>');
+     console.log();
+      deathsElement.append(`<li>${inputsArray[i]}</li>`);
+      
     }
     $('#btn').click(function() {
       localStorage.clear();
